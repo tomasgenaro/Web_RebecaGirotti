@@ -1,107 +1,23 @@
 /* Definición de fuentes Poppins */
 @font-face {
     font-family: 'Poppins';
-    src: url('Poppins/Poppins-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('Poppins/Poppins-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('Poppins/Poppins-BoldItalic.ttf') format('truetype');
-    font-weight: 700;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('Poppins/Poppins-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('Poppins/Poppins-SemiBoldItalic.ttf') format('truetype');
-    font-weight: 600;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('Poppins/Poppins-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('Poppins/Poppins-MediumItalic.ttf') format('truetype');
-    font-weight: 500;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('Poppins/Poppins-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('Poppins/Poppins-LightItalic.ttf') format('truetype');
-    font-weight: 300;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('Poppins/Poppins-ExtraLight.ttf') format('truetype');
-    font-weight: 200;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('Poppins/Poppins-ExtraLightItalic.ttf') format('truetype');
-    font-weight: 200;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('Poppins/Poppins-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('Poppins/Poppins-ExtraBoldItalic.ttf') format('truetype');
-    font-weight: 800;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('Poppins/Poppins-Black.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('Poppins/Poppins-BlackItalic.ttf') format('truetype');
-    font-weight: 900;
-    font-style: italic;
+    src: url('Poppins/Poppins-Regular.ttf') format('truetype'),
+         url('Poppins/Poppins-Bold.ttf') format('truetype'),
+         url('Poppins/Poppins-BoldItalic.ttf') format('truetype'),
+         url('Poppins/Poppins-SemiBold.ttf') format('truetype'),
+         url('Poppins/Poppins-SemiBoldItalic.ttf') format('truetype'),
+         url('Poppins/Poppins-Medium.ttf') format('truetype'),
+         url('Poppins/Poppins-MediumItalic.ttf') format('truetype'),
+         url('Poppins/Poppins-Light.ttf') format('truetype'),
+         url('Poppins/Poppins-LightItalic.ttf') format('truetype'),
+         url('Poppins/Poppins-ExtraLight.ttf') format('truetype'),
+         url('Poppins/Poppins-ExtraLightItalic.ttf') format('truetype'),
+         url('Poppins/Poppins-ExtraBold.ttf') format('truetype'),
+         url('Poppins/Poppins-ExtraBoldItalic.ttf') format('truetype'),
+         url('Poppins/Poppins-Black.ttf') format('truetype'),
+         url('Poppins/Poppins-BlackItalic.ttf') format('truetype');
+    font-weight: 200 900;
+    font-style: normal italic;
 }
 
 /* General Styles */
@@ -109,52 +25,77 @@ body {
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #eae7ec;
     color: #4a494a;
-    transition: background-color 0.5s ease-in-out;
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
+    position: relative;
 }
 
-body:hover {
-    background-color: #f5eb70;
+/* Fondo animado */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 25%, rgba(0, 0, 0, 0.02) 25%, rgba(0, 0, 0, 0.02) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 75%, rgba(0, 0, 0, 0.02) 75%, rgba(0, 0, 0, 0.02) 100%);
+    background-size: 200% 200%;
+    animation: wave 20s ease infinite;
+    z-index: -1;
+    pointer-events: none;
 }
 
+/* Fondo animado secundario */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1) 100%);
+    background-size: 200% 200%;
+    animation: wave 20s ease infinite;
+    animation-delay: 1s; /* Retraso de 1 segundo */
+    z-index: -1;
+    pointer-events: none;
+}
+
+@keyframes wave {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Transiciones y efectos en los elementos */
 header, main, footer, section {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 header:hover, main:hover, footer:hover, section:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 header {
     background-color: #ab99b2;
     padding: 20px;
     color: #4a494a;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 12px; /* Aumenta el radio para un aspecto más moderno */
     text-align: center;
     font-weight: 700;
     position: relative;
 }
 
 header .logo {
-    max-width: 400px; /* Ajusta el tamaño máximo del logo aquí */
+    max-width: 300px; /* Ajusta el tamaño máximo del logo aquí */
     height: auto;
-    margin-bottom: 0px; /* Ajusta el margen inferior para acercar el logo al texto */
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3)); /* Añade una sombra más suave y moderna */
-}
-
-header h1 {
-    margin: 0;
-}
-
-header h2 {
-    margin: 0;
-}
-
-header h3 {
-    margin: 0;
+    margin-bottom: 10px; /* Ajusta el margen inferior para el logo */
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2)); /* Sombra más pronunciada */
 }
 
 nav ul {
@@ -165,39 +106,36 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 25px; /* Mayor espaciado entre elementos de navegación */
 }
 
 nav ul li a {
     color: #4a494a;
     text-decoration: none;
-    font-weight: 600; /* Poppins SemiBold */
-    transition: color 0.3s ease;
+    font-weight: 600;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 nav ul li a:hover {
     color: #f5eb70;
-}
-
-main, section, #inicio.centrado {
-    font-weight: 400; /* Poppins Regular */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); /* Efecto de sombra más sutil */
 }
 
 section {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 12px; /* Aumenta el radio del borde */
     margin-bottom: 20px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px; /* Aumenta el padding para más espacio */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 footer {
     background-color: #ab99b2;
     color: #4a494a;
     text-align: center;
-    padding: 10px;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    font-weight: 700; /* Poppins Bold */
+    padding: 15px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
 }
 
 #imagen {
@@ -207,36 +145,35 @@ footer {
     background-image: url('img/fondo02.jpg');
     background-size: cover;
     background-position: center;
-    padding: 50px 0; /* Espacio alrededor de la imagen */
-    border-radius: 10px; /* Ajusta según tus preferencias */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 60px 0; /* Aumenta el padding alrededor de la imagen */
+    border-radius: 12px; /* Aumenta el radio del borde */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 #imagen img {
     border-radius: 50%;
-    max-width: 50%;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 60%; /* Ajusta el tamaño máximo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 #imagen img:hover {
     transform: scale(1.1);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
 #imagen h1 {
     text-align: center;
-    font-family: 'Poppins', Arial, sans-serif;
-    font-weight: 900; /* Poppins Black */
+    font-weight: 900;
 }
 
 #contacto address {
     text-align: center;
-    font-weight: 300; /* Poppins Light */
+    font-weight: 300;
 }
 
 #contacto address a {
-    color: #4a494a; /* Color de los enlaces */
+    color: #4a494a;
     text-decoration: none;
 }
 
@@ -246,15 +183,15 @@ footer {
 
 .redes-sociales {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px; /* Aumenta el margen superior */
 }
 
 .redes-sociales a {
-    margin: 0 10px;
+    margin: 0 15px; /* Mayor espaciado entre iconos */
     display: inline-block;
     color: #4a494a;
-    font-size: 2em;
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-size: 2.5em; /* Aumenta el tamaño de los iconos */
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .redes-sociales a:hover {
@@ -267,53 +204,57 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
-    text-align: justify; /* Justifica el texto en los párrafos */
-    padding: 20px; /* Espacio alrededor del contenido */
+    height: 100vh;
+    text-align: center; /* Centra el texto en todas las pantallas */
+    padding: 40px; /* Aumenta el padding */
 }
 
 #inicio h2, #inicio p, #inicio h3 {
-    text-align: center; /* Centra los encabezados y el texto en dispositivos móviles */
-    max-width: 800px; /* Opcional: establece un ancho máximo para que el texto no se extienda demasiado en pantallas grandes */
+    max-width: 800px; /* Establece un ancho máximo */
 }
 
 #inicio p {
-    text-align: justify; /* Justifica el texto en los párrafos */
-    margin-bottom: 15px; /* Espaciado entre párrafos */
+    text-align: justify;
+    margin-bottom: 20px; /* Aumenta el margen inferior */
 }
 
 @media (max-width: 768px) {
     #inicio {
-        text-align: center; /* Alinea el texto al centro en pantallas pequeñas */
+        padding: 20px; /* Menor padding en pantallas pequeñas */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0; /* Menor espaciado en pantallas pequeñas */
     }
 }
 
 /* WhatsApp Floating Icon */
 .whatsapp-icon {
-    position: fixed; /* Mantiene el ícono en una posición fija en la pantalla */
-    top: 50%; /* Centra el ícono verticalmente */
-    right: 20px; /* Ajusta la distancia desde el borde derecho de la pantalla */
-    transform: translateY(-50%); /* Ajusta el ícono para que esté centrado verticalmente */
-    width: 27px; /* Ancho del contenedor del ícono */
-    height: 27px; /* Alto del contenedor del ícono */
-    display: flex; /* Usa flexbox para centrar el ícono dentro del contenedor */
-    align-items: center; /* Centra verticalmente el ícono */
-    justify-content: center; /* Centra horizontalmente el ícono */
-    background-color: transparent; /* Fondo transparente para el contenedor */
-    border-radius: 50%; /* Hace el contenedor redondo */
-    box-shadow: none; /* Elimina la sombra para verificar la visibilidad del contenedor */
-    z-index: 1000; /* Asegura que el ícono esté encima de otros elementos */
-    transition: transform 0.3s ease; /* Transiciones suaves */
-    overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 25px; /* Aumenta el tamaño del contenedor */
+    height: 25px; /* Aumenta el tamaño del contenedor */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366; /* Color de fondo para el ícono de WhatsApp */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
 }
 
 .whatsapp-icon img {
-    width: 100%; /* Hace que el ícono ocupe todo el contenedor */
-    height: 100%; /* Hace que el ícono ocupe todo el contenedor */
-    object-fit: cover; /* Ajusta la imagen para que cubra todo el contenedor */
-    display: block; /* Evita espacio extra alrededor de la imagen */
+    width: 80%; /* Ajusta el tamaño del ícono */
+    height: 80%;
+    object-fit: cover;
 }
 
 .whatsapp-icon:hover {
-    transform: translateY(-50%) scale(1.1); /* Aumenta ligeramente el tamaño del ícono al pasar el cursor */
+    transform: scale(1.2); /* Aumenta el tamaño del ícono en hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
