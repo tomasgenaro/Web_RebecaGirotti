@@ -297,27 +297,26 @@ footer {
     top: 50%; /* Centra el ícono verticalmente */
     right: 20px; /* Ajusta la distancia desde el borde derecho de la pantalla */
     transform: translateY(-50%); /* Ajusta el ícono para que esté centrado verticalmente */
-    background-color: #25D366; /* Color de fondo para mayor visibilidad */
-    border-radius: 50%; /* Hace el ícono redondo */
-    padding: 10px; /* Espacio alrededor del ícono */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para mayor visibilidad */
-    z-index: 1000; /* Asegura que el ícono esté encima de otros elementos */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+    width: 27px; /* Ancho del contenedor del ícono */
+    height: 27px; /* Alto del contenedor del ícono */
     display: flex; /* Usa flexbox para centrar el ícono dentro del contenedor */
     align-items: center; /* Centra verticalmente el ícono */
     justify-content: center; /* Centra horizontalmente el ícono */
-    width: 60px; /* Ancho del contenedor del ícono */
-    height: 60px; /* Alto del contenedor del ícono */
+    background-color: transparent; /* Fondo transparente para el contenedor */
+    border-radius: 50%; /* Hace el contenedor redondo */
+    box-shadow: none; /* Elimina la sombra para verificar la visibilidad del contenedor */
+    z-index: 1000; /* Asegura que el ícono esté encima de otros elementos */
+    transition: transform 0.3s ease; /* Transiciones suaves */
+    overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
 }
 
 .whatsapp-icon img {
-    width: 30px; /* Ajusta el tamaño del ícono */
-    height: 30px; /* Ajusta el tamaño del ícono */
+    width: 100%; /* Hace que el ícono ocupe todo el contenedor */
+    height: 100%; /* Hace que el ícono ocupe todo el contenedor */
+    object-fit: cover; /* Ajusta la imagen para que cubra todo el contenedor */
     display: block; /* Evita espacio extra alrededor de la imagen */
-    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionarla */
 }
 
 .whatsapp-icon:hover {
-    background-color: #128C7E; /* Cambia el color de fondo al pasar el cursor */
     transform: translateY(-50%) scale(1.1); /* Aumenta ligeramente el tamaño del ícono al pasar el cursor */
 }
