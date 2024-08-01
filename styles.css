@@ -1,0 +1,323 @@
+/* Definición de fuentes Poppins */
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins/Poppins-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins/Poppins-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins/Poppins-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins/Poppins-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins/Poppins-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins/Poppins-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins/Poppins-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins/Poppins-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins/Poppins-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins/Poppins-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins/Poppins-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* General Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eae7ec;
+    color: #4a494a;
+    transition: background-color 0.5s ease-in-out;
+}
+
+body:hover {
+    background-color: #f5eb70;
+}
+
+header, main, footer, section {
+    transition: transform 0.3s ease-in-out;
+}
+
+header:hover, main:hover, footer:hover, section:hover {
+    transform: translateY(-5px);
+}
+
+header {
+    background-color: #ab99b2;
+    padding: 20px;
+    color: #4a494a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+}
+
+header .logo {
+    max-width: 400px; /* Ajusta el tamaño máximo del logo aquí */
+    height: auto;
+    margin-bottom: 0px; /* Ajusta el margen inferior para acercar el logo al texto */
+   /*ox-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del logo */
+   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3)); /* Añade una sombra más suave y moderna */}
+
+header h1 {
+    margin: 0;
+}
+
+header h2 {
+    margin: 0;
+}
+header h3 {
+    margin: 0;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #4a494a;
+    text-decoration: none;
+    font-weight: 600; /* Poppins SemiBold */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f5eb70;
+}
+
+main, section, #inicio.centrado {
+    font-weight: 400; /* Poppins Regular */
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #ab99b2;
+    color: #4a494a;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 700; /* Poppins Bold */
+}
+
+#imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('img/fondo02.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0; /* Espacio alrededor de la imagen */
+    border-radius: 10px; /* Ajusta según tus preferencias */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#imagen img {
+    border-radius: 50%;
+    max-width: 50%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#imagen img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+#imagen h1 {
+    text-align: center;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 900; /* Poppins Black */
+}
+
+#contacto address {
+    text-align: center;
+    font-weight: 300; /* Poppins Light */
+}
+
+#contacto address a {
+    color: #4a494a; /* Color de los enlaces */
+    text-decoration: none;
+}
+
+#contacto address a:hover {
+    text-decoration: underline;
+}
+
+.redes-sociales {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.redes-sociales a {
+    margin: 0 10px;
+    display: inline-block;
+    color: #4a494a;
+    font-size: 2em;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.redes-sociales a:hover {
+    transform: scale(1.1);
+    color: #ab99b2;
+}
+
+#inicio.centrado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#servicios ul {
+    list-style: none;
+    padding: 0;
+}
+
+#servicios ul li {
+    background-color: #ab99b2;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-weight: 600; /* Poppins SemiBold */
+}
+
+#servicios ul li:hover {
+    background-color: #f5eb70;
+}
+
+.logo {
+    max-width: 200px; /* Ajusta el valor según el tamaño deseado */
+    height: auto;
+}
+
+/* WhatsApp Floating Icon */
+.whatsapp-icon {
+    position: fixed; /* Mantiene el ícono en una posición fija en la pantalla */
+    top: 50%; /* Centra el ícono verticalmente */
+    right: 20px; /* Ajusta la distancia desde el borde derecho de la pantalla */
+    transform: translateY(-50%); /* Ajusta el ícono para que esté centrado verticalmente */
+    background-color: #25D366; /* Color de fondo para mayor visibilidad */
+    border-radius: 50%; /* Hace el ícono redondo */
+    padding: 10px; /* Espacio alrededor del ícono */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para mayor visibilidad */
+    z-index: 1000; /* Asegura que el ícono esté encima de otros elementos */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+    display: flex; /* Usa flexbox para centrar el ícono dentro del contenedor */
+    align-items: center; /* Centra verticalmente el ícono */
+    justify-content: center; /* Centra horizontalmente el ícono */
+    width: 60px; /* Ancho del contenedor del ícono */
+    height: 60px; /* Alto del contenedor del ícono */
+}
+
+.whatsapp-icon img {
+    width: 30px; /* Ajusta el tamaño del ícono */
+    height: 30px; /* Ajusta el tamaño del ícono */
+    display: block; /* Evita espacio extra alrededor de la imagen */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionarla */
+}
+
+.whatsapp-icon:hover {
+    background-color: #128C7E; /* Cambia el color de fondo al pasar el cursor */
+    transform: translateY(-50%) scale(1.1); /* Aumenta ligeramente el tamaño del ícono al pasar el cursor */
+}
