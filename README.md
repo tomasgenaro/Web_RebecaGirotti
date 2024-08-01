@@ -1,4 +1,4 @@
-echo "# Página Web de la Dra. Rebeca Girotti - Abogada
+Página Web de la Dra. Rebeca Girotti - Abogada
 
 Bienvenido al repositorio de la página web estática de Rebeca Girotti, abogada. Este proyecto está diseñado para proporcionar información sobre los servicios legales ofrecidos por la Dra. Girotti.
 
