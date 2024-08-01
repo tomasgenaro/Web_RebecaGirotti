@@ -142,8 +142,8 @@ header .logo {
     max-width: 400px; /* Ajusta el tamaño máximo del logo aquí */
     height: auto;
     margin-bottom: 0px; /* Ajusta el margen inferior para acercar el logo al texto */
-   /*ox-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del logo */
-   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3)); /* Añade una sombra más suave y moderna */}
+    /*ox-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del logo */
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3)); /* Añade una sombra más suave y moderna */}
 
 header h1 {
     margin: 0;
