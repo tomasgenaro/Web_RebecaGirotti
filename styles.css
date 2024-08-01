@@ -142,8 +142,8 @@ header .logo {
     max-width: 400px; /* Ajusta el tamaño máximo del logo aquí */
     height: auto;
     margin-bottom: 0px; /* Ajusta el margen inferior para acercar el logo al texto */
-    /*ox-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del logo */
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3)); /* Añade una sombra más suave y moderna */}
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3)); /* Añade una sombra más suave y moderna */
+}
 
 header h1 {
     margin: 0;
@@ -152,9 +152,11 @@ header h1 {
 header h2 {
     margin: 0;
 }
+
 header h3 {
     margin: 0;
 }
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -260,35 +262,30 @@ footer {
     color: #ab99b2;
 }
 
-#inicio.centrado {
+#inicio {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+    text-align: justify; /* Justifica el texto en los párrafos */
+    padding: 20px; /* Espacio alrededor del contenido */
 }
 
-#servicios ul {
-    list-style: none;
-    padding: 0;
+#inicio h2, #inicio p, #inicio h3 {
+    text-align: center; /* Centra los encabezados y el texto en dispositivos móviles */
+    max-width: 800px; /* Opcional: establece un ancho máximo para que el texto no se extienda demasiado en pantallas grandes */
 }
 
-#servicios ul li {
-    background-color: #ab99b2;
-    margin: 0.5rem 0;
-    padding: 0.5rem;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    font-weight: 600; /* Poppins SemiBold */
+#inicio p {
+    text-align: justify; /* Justifica el texto en los párrafos */
+    margin-bottom: 15px; /* Espaciado entre párrafos */
 }
 
-#servicios ul li:hover {
-    background-color: #f5eb70;
-}
-
-.logo {
-    max-width: 200px; /* Ajusta el valor según el tamaño deseado */
-    height: auto;
+@media (max-width: 768px) {
+    #inicio {
+        text-align: center; /* Alinea el texto al centro en pantallas pequeñas */
+    }
 }
 
 /* WhatsApp Floating Icon */
