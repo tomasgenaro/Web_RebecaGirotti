@@ -31,28 +31,4 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- LinkedIn -->
-  <url>
-    <loc>https://www.linkedin.com/in/rebeca-girotti-a81581283/</loc>
-    <lastmod>2024-08-02</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- Instagram -->
-  <url>
-    <loc>https://www.instagram.com/abogadarebecagirotti/</loc>
-    <lastmod>2024-08-02</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- WhatsApp Link -->
-  <url>
-    <loc>https://w.app/jTINVS</loc>
-    <lastmod>2024-08-02</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
 </urlset>
