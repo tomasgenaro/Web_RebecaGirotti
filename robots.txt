@@ -1,0 +1,30 @@
+# Global settings for all web crawlers
+User-agent: *
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /backup/
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /scripts/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Allow: /wp-admin/admin-ajax.php
+
+# Block specific bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Allow all bots to access the images and CSS/JS directories
+User-agent: *
+Allow: /wp-content/uploads/
+Allow: /wp-content/themes/
+Allow: /wp-content/plugins/
+
+# Sitemap location
+Sitemap: https://abogadarebecagirotti.com.ar/sitemap.xml

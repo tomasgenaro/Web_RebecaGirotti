@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://abogadarebecagirotti.com.ar/</loc>
+    <lastmod>2024-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Inicio Section -->
+  <url>
+    <loc>https://abogadarebecagirotti.com.ar/#inicio</loc>
+    <lastmod>2024-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Servicios Section -->
+  <url>
+    <loc>https://abogadarebecagirotti.com.ar/#servicios</loc>
+    <lastmod>2024-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contacto Section -->
+  <url>
+    <loc>https://abogadarebecagirotti.com.ar/#contacto</loc>
+    <lastmod>2024-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- LinkedIn -->
+  <url>
+    <loc>https://www.linkedin.com/in/rebeca-girotti-a81581283/</loc>
+    <lastmod>2024-08-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Instagram -->
+  <url>
+    <loc>https://www.instagram.com/abogadarebecagirotti/</loc>
+    <lastmod>2024-08-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- WhatsApp Link -->
+  <url>
+    <loc>https://w.app/jTINVS</loc>
+    <lastmod>2024-08-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
