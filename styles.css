@@ -90,9 +90,9 @@ header::before {
     content: ''; /* Crea un pseudo-elemento vacío */
     position: absolute; /* Posiciona el pseudo-elemento absolutamente dentro del header */
     top: 50%; /* Ubica la línea en el centro vertical del header */
-    left: 50%; /* Centra la línea horizontalmente dentro del header */
+    left: 45%; /* Centra la línea horizontalmente dentro del header */
     transform: translate(-50%, -50%) rotate(-45deg); /* Ajusta la posición para centrar la línea */
-    width: 100%; /* Define el ancho de la línea transversal */
+    width: 400%; /* Define el ancho de la línea transversal */
     height: 20px; /* Define el grosor de la línea */
     background-color: transparent; /* Color de la línea transparente */
     box-shadow: 16px 12px 8px rgba(0, 0, 0, 0.4); /* Sombra difusa */
