@@ -1,420 +1,327 @@
 /* Definición de fuentes Poppins */
 @font-face {
-    font-family: 'Poppins';
-    src: url('Poppins/Poppins-Regular.ttf') format('truetype'),
-    url('Poppins/Poppins-Bold.ttf') format('truetype'),
-    url('Poppins/Poppins-BoldItalic.ttf') format('truetype'),
-    url('Poppins/Poppins-SemiBold.ttf') format('truetype'),
-    url('Poppins/Poppins-SemiBoldItalic.ttf') format('truetype'),
-    url('Poppins/Poppins-Medium.ttf') format('truetype'),
-    url('Poppins/Poppins-MediumItalic.ttf') format('truetype'),
-    url('Poppins/Poppins-Light.ttf') format('truetype'),
-    url('Poppins/Poppins-LightItalic.ttf') format('truetype'),
-    url('Poppins/Poppins-ExtraLight.ttf') format('truetype'),
-    url('Poppins/Poppins-ExtraLightItalic.ttf') format('truetype'),
-    url('Poppins/Poppins-ExtraBold.ttf') format('truetype'),
-    url('Poppins/Poppins-ExtraBoldItalic.ttf') format('truetype'),
-    url('Poppins/Poppins-Black.ttf') format('truetype'),
-    url('Poppins/Poppins-BlackItalic.ttf') format('truetype');
-    font-weight: 200 900;
-    font-style: normal italic;
+    font-family: 'Poppins'; /* Especifica el nombre de la fuente que será usada en el CSS */
+    src: url('Poppins/Poppins-Regular.ttf') format('truetype'), /* Ruta y formato para la fuente regular */
+    url('Poppins/Poppins-Bold.ttf') format('truetype'),    /* Ruta y formato para la fuente en negrita */
+    url('Poppins/Poppins-Medium.ttf') format('truetype');   /* Ruta y formato para la fuente en mediana */
+    font-weight: 200 900; /* Define el rango de pesos que esta fuente puede utilizar */
+    font-style: normal;  /* Indica el estilo de la fuente, en este caso es normal (no cursiva) */
 }
 
 /* General Styles */
 body {
-    font-family: 'Poppins', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #4a494a;
+    font-family: 'Poppins', Arial, sans-serif; /* Establece la fuente principal como Poppins, con Arial y sans-serif como alternativas */
+    margin: 0; /* Elimina los márgenes predeterminados del cuerpo */
+    padding: 0; /* Elimina el relleno predeterminado del cuerpo */
+    background-color: #eae7ec; /* Define el color de fondo del cuerpo */
+    color: #4a494a; /* Establece el color del texto en el cuerpo */
     overflow-x: hidden; /* Evita el desbordamiento horizontal */
-    position: relative;
+    position: relative; /* Establece la posición relativa para posicionamiento interno */
+    transition: background-color 0.5s ease-in-out; /* Añade una transición suave para el cambio de color de fondo */
+}
+
+body:hover {
+    background-color: #8da3a6; /*#f5eb70;*/ /* Cambia el color de fondo del cuerpo al pasar el mouse sobre él */
 }
 
 /* Fondo animado */
 body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 25%, rgba(0, 0, 0, 0.02) 25%, rgba(0, 0, 0, 0.02) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 75%, rgba(0, 0, 0, 0.02) 75%, rgba(0, 0, 0, 0.02) 100%);
-    background-size: 200% 200%;
-    animation: wave 20s ease infinite;
-    z-index: -1;
-    pointer-events: none;
+    content: ''; /* Crea un pseudo-elemento vacío */
+    position: fixed; /* Fija el pseudo-elemento en la ventana del navegador */
+    top: 0; /* Posiciona el pseudo-elemento en la parte superior */
+    left: 0; /* Posiciona el pseudo-elemento en el lado izquierdo */
+    width: 100%; /* Asegura que el pseudo-elemento cubra todo el ancho */
+    height: 100%; /* Asegura que el pseudo-elemento cubra toda la altura */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 25%, rgba(0, 0, 0, 0.02) 25%, rgba(0, 0, 0, 0.02) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 75%, rgba(0, 0, 0, 0.02) 75%, rgba(0, 0, 0, 0.02) 100%); /* Aplica un gradiente lineal con varias transiciones de color */
+    background-size: 200% 200%; /* Establece el tamaño del fondo para permitir la animación */
+    animation: wave 20s ease infinite; /* Aplica una animación llamada "wave" que dura 20 segundos y se repite infinitamente */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido principal */
+    pointer-events: none; /* Evita que el pseudo-elemento interfiera con las interacciones del ratón */
 }
 
 /* Fondo animado secundario */
 body::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1) 100%);
-    background-size: 200% 200%;
-    animation: wave 20s ease infinite;
-    animation-delay: 1s; /* Retraso de 1 segundo */
-    z-index: -1;
-    pointer-events: none;
+    content: ''; /* Crea un pseudo-elemento vacío */
+    position: fixed; /* Fija el pseudo-elemento en la ventana del navegador */
+    top: 0; /* Posiciona el pseudo-elemento en la parte superior */
+    left: 0; /* Posiciona el pseudo-elemento en el lado izquierdo */
+    width: 100%; /* Asegura que el pseudo-elemento cubra todo el ancho */
+    height: 100%; /* Asegura que el pseudo-elemento cubra toda la altura */
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1) 100%); /* Aplica un gradiente lineal con varias transiciones de color */
+    background-size: 200% 200%; /* Establece el tamaño del fondo para permitir la animación */
+    animation: wave 20s ease infinite; /* Aplica una animación llamada "wave" que dura 20 segundos y se repite infinitamente */
+    animation-delay: 1s; /* Retraso de 1 segundo antes de comenzar la animación */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido principal */
+    pointer-events: none; /* Evita que el pseudo-elemento interfiera con las interacciones del ratón */
 }
 
 @keyframes wave {
     0% {
-        background-position: 0% 0%;
+        background-position: 0% 0%; /* Inicio de la animación: posición del fondo en la esquina superior izquierda */
     }
     100% {
-        background-position: 100% 100%;
+        background-position: 100% 100%; /* Fin de la animación: posición del fondo en la esquina inferior derecha */
     }
 }
 
 /* Transiciones y efectos en los elementos */
-header, main, footer, section {
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+header, main, footer, section, .whatsapp-icon {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para los cambios en transformación y sombra */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para los elementos */
 }
 
-header:hover, main:hover, footer:hover, section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+header:hover, main:hover, footer:hover, section:hover, .whatsapp-icon:hover {
+    transform: translateY(-5px); /* Eleva los elementos al pasar el mouse sobre ellos */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al pasar el mouse sobre los elementos */
 }
 
 header {
-    background-color: #ab99b2;
-    padding: 20px;
-    color: #4a494a;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 12px; /* Aumenta el radio para un aspecto más moderno */
-    text-align: center;
-    font-weight: 700;
-    position: relative;
+    position: relative; /* Necesario para posicionar el pseudo-elemento dentro del header */
+    background-color: #ab99b2; /* Color de fondo del encabezado */
+    padding: 20px; /* Espaciado interno del encabezado */
+    color: #4a494a; /* Color del texto del encabezado */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra del texto en el encabezado */
+    text-align: center; /* Alinea el texto al centro del encabezado */
+    font-weight: 700; /* Define el peso de la fuente en el encabezado */
+    overflow: hidden; /* Asegura que los elementos hijos no se desborden fuera del contenedor */
+}
+
+header::before {
+    content: ''; /* Crea un pseudo-elemento vacío */
+    position: absolute; /* Posiciona el pseudo-elemento absolutamente dentro del header */
+    top: 50%; /* Ubica la línea en el centro vertical del header */
+    left: 50%; /* Centra la línea horizontalmente dentro del header */
+    transform: translate(-50%, -50%) rotate(-45deg); /* Ajusta la posición para centrar la línea */
+    width: 100%; /* Define el ancho de la línea transversal */
+    height: 20px; /* Define el grosor de la línea */
+    background-color: transparent; /* Color de la línea transparente */
+    box-shadow: 16px 12px 8px rgba(0, 0, 0, 0.4); /* Sombra difusa */
+    z-index: 0; /* Asegura que la línea esté detrás del contenido del encabezado */
+}
+
+header:hover {
+    transform: translateY(-3px); /* Eleva el encabezado ligeramente al pasar el mouse */
 }
 
 header .logo {
-    max-width: 300px; /* Ajusta el tamaño máximo del logo aquí */
-    height: auto;
-    margin-bottom: 10px; /* Ajusta el margen inferior para el logo */
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2)); /* Sombra más pronunciada */
+    position: relative;
+    max-width: 300px; /* Establece el ancho máximo de la imagen del logo */
+    height: auto; /* Mantiene la proporción de altura de la imagen del logo */
+    margin-bottom: 10px; /* Espaciado inferior de la imagen del logo */
+    z-index: 1000;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2)); /* Añade una sombra difusa a la imagen del logo */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    background-color: #9b9b9b;
+    border-radius: 100%;
 }
 
+nav {
+    position: relative; /* Asegúrate de que el elemento esté posicionado */
+    z-index: 100; /* Ajusta el valor según sea necesario */
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style-type: none; /* Elimina los puntos de lista de los elementos del menú de navegación */
+    padding: 0; /* Elimina el relleno predeterminado del menú de navegación */
+    margin: 0; /* Elimina el margen predeterminado del menú de navegación */
+
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 25px; /* Mayor espaciado entre elementos de navegación */
+    display: inline; /* Muestra los elementos de lista en una línea horizontal */
+    margin-right: 20px; /* Añade un espaciado a la derecha de cada elemento de lista */
 }
 
 nav ul li a {
-    color: #4a494a;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+    color: white; /* Define el color del texto del enlace en el menú de navegación */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    font-weight: 500; /* Define el peso de la fuente del enlace */
+    transition: color 0.3s ease; /* Añade una transición suave para el cambio de color del enlace */
+    
 }
 
 nav ul li a:hover {
-    color: #f5eb70;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); /* Efecto de sombra más sutil */
+    color: #4a494a; /* Cambia el color del texto del enlace al pasar el mouse sobre él */
+}
+
+main {
+    padding: 20px; /* Añade un espaciado interno al área principal del contenido */
 }
 
 section {
-    background-color: white;
-    border-radius: 12px; /* Aumenta el radio del borde */
-    margin-bottom: 20px;
-    padding: 30px; /* Aumenta el padding para más espacio */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: white; /* Define el color de fondo de las secciones */
+    border-radius: 12px; /* Añade bordes redondeados a las secciones */
+    margin-bottom: 30px; /* Añade un espaciado en la parte inferior de cada sección */
+    padding: 40px; /* Añade un espaciado interno a las secciones */
 }
 
 footer {
-    background-color: #ab99b2;
-    color: #4a494a;
-    text-align: center;
-    padding: 15px;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
-    font-weight: 700;
+    background-color: #ab99b2; /* Define el color de fondo del pie de página */
+    color: #4a494a; /* Define el color del texto en el pie de página */
+    text-align: center; /* Alinea el texto al centro en el pie de página */
+    padding: 15px; /* Añade un espaciado interno al pie de página */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra difusa hacia arriba en el pie de página */
+    font-weight: 700; /* Define el peso de la fuente en el pie de página */
 }
 
 #imagen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: url('img/fondo02.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 60px 0; /* Aumenta el padding alrededor de la imagen */
-    border-radius: 12px; /* Aumenta el radio del borde */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    display: flex; /* Utiliza flexbox para organizar el contenido */
+    flex-direction: column; /* Organiza los elementos en una columna vertical */
+    align-items: center; /* Alinea los elementos al centro horizontalmente */
+    background-image: url('img/fondo02.jpg'); /* Establece una imagen de fondo para el contenedor */
+    background-size: cover; /* Asegura que la imagen de fondo cubra todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo en el contenedor */
+    padding: 60px 0; /* Añade un espaciado interno vertical de 60px */
+    border-radius: 12px; /* Añade bordes redondeados al contenedor */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Añade una sombra difusa alrededor del contenedor */
 }
 
 #imagen img {
-    border-radius: 50%;
-    max-width: 60%; /* Ajusta el tamaño máximo */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+    max-width: 50%; /* Limita el ancho máximo de la imagen al 50% del contenedor */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Añade transiciones suaves para transformaciones y sombras */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil a la imagen */
 }
 
 #imagen img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1); /* Escala la imagen al 110% al pasar el mouse sobre ella */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al pasar el mouse sobre la imagen */
 }
 
 #imagen h1 {
-    text-align: center;
-    font-weight: 900;
+    text-align: center; /* Centra el texto del encabezado horizontalmente */
+    font-weight: 900; /* Define el peso de la fuente del encabezado como muy grueso */
 }
 
 #contacto address {
-    text-align: center;
-    font-weight: 300;
+    text-align: center; /* Centra el texto dentro del elemento address */
+    font-weight: 300; /* Define un peso de fuente ligero para el texto */
 }
 
 #contacto address a {
-    color: #4a494a;
-    text-decoration: none;
+    color: #4a494a; /* Establece el color del texto de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
 }
 
 #contacto address a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Añade subrayado a los enlaces al pasar el mouse sobre ellos */
 }
 
 .redes-sociales {
-    text-align: center;
-    margin-top: 30px; /* Aumenta el margen superior */
+    text-align: center; /* Centra el contenido de la sección de redes sociales */
+    margin-top: 30px; /* Añade un espaciado superior de 30px */
 }
 
 .redes-sociales a {
-    margin: 0 15px; /* Mayor espaciado entre iconos */
-    display: inline-block;
-    color: #4a494a;
-    font-size: 2.5em; /* Aumenta el tamaño de los iconos */
-    transition: transform 0.3s ease, color 0.3s ease;
+    margin: 0 15px; /* Añade espaciado horizontal de 15px a ambos lados de los enlaces */
+    display: inline-block; /* Muestra los enlaces en línea con características de bloque */
+    color: #4a494a; /* Define el color del texto de los enlaces */
+    font-size: 2.5em; /* Establece el tamaño de fuente a 2.5 veces el tamaño base */
+    transition: transform 0.3s ease, color 0.3s ease; /* Añade transiciones suaves para transformaciones y cambios de color */
+    text-decoration: none; /* Quita el subrayado */
 }
 
 .redes-sociales a:hover {
-    transform: scale(1.1);
-    color: #ab99b2;
+    transform: scale(1.1); /* Escala los enlaces al 110% al pasar el mouse sobre ellos */
+    color: #ab99b2; /* Cambia el color del texto de los enlaces al pasar el mouse sobre ellos */
 }
 
 #inicio {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center; /* Centra el texto en todas las pantallas */
-    padding: 40px; /* Aumenta el padding */
+    display: flex; /* Utiliza flexbox para organizar el contenido */
+    flex-direction: column; /* Organiza los elementos en una columna vertical */
+    justify-content: center; /* Centra los elementos verticalmente en el contenedor */
+    align-items: center; /* Alinea los elementos horizontalmente en el centro */
+    height: 100vh; /* Establece la altura del contenedor al 100% de la altura de la ventana */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    padding: 40px; /* Añade un espaciado interno de 40px */
+}
+
+#inicio.centrado {
+    display: flex; /* Utiliza flexbox para organizar el contenido */
+    flex-direction: column; /* Organiza los elementos en una columna vertical */
+    justify-content: center; /* Centra los elementos verticalmente en el contenedor */
+    align-items: center; /* Alinea los elementos horizontalmente en el centro */
+    height: 100vh; /* Establece la altura del contenedor al 100% de la altura de la ventana */
 }
 
 #inicio h2, #inicio p, #inicio h3 {
-    max-width: 800px; /* Establece un ancho máximo */
+    max-width: 800px; /* Limita el ancho máximo de los encabezados y párrafos */
 }
 
 #inicio p {
-    text-align: justify;
-    margin-bottom: 20px; /* Aumenta el margen inferior */
+    text-align: justify; /* Justifica el texto dentro de los párrafos */
+    margin-bottom: 20px; /* Añade un espaciado inferior de 20px a los párrafos */
 }
 
 @media (max-width: 768px) {
     #inicio {
-        padding: 20px; /* Menor padding en pantallas pequeñas */
+        padding: 20px; /* Reduce el espaciado interno a 20px en pantallas pequeñas */
     }
 
     nav ul li {
-        display: block;
-        margin: 10px 0; /* Menor espaciado en pantallas pequeñas */
+        display: block; /* Muestra los elementos de lista en bloque en pantallas pequeñas */
+        margin: 10px 0; /* Añade espaciado vertical de 10px a los elementos de lista */
     }
+}
+
+#servicios ul {
+    list-style: none; /* Elimina los puntos de lista de los elementos */
+    padding: 0; /* Elimina el relleno predeterminado de la lista */
+}
+
+#servicios ul li {
+    background-color: #ab99b2; /* Define el color de fondo de los elementos de lista */
+    margin: 0.5rem 0; /* Añade un espaciado vertical de 0.5rem a los elementos de lista */
+    padding: 0.5rem; /* Añade un espaciado interno de 0.5rem a los elementos de lista */
+    border-radius: 8px; /* Añade bordes redondeados a los elementos de lista */
+    transition: background-color 0.3s ease; /* Añade una transición suave para el cambio de color de fondo */
+    font-weight: 600; /* Define el peso de la fuente en los elementos de lista */
+}
+
+#servicios ul li:hover {
+    background-color: #8da3a6;  /* Cambia el color de fondo al pasar el mouse sobre los elementos de lista */
+    transform: scale(1.01);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Transición más suave y lenta */
+
+}
+
+.logo {
+    max-width: 200px; /* Limita el ancho máximo del logo a 200px */
+    height: auto; /* Mantiene la proporción de altura del logo */
 }
 
 /* WhatsApp Floating Icon */
 .whatsapp-icon {
-    position: fixed; /* Mantiene el ícono en una posición fija en la pantalla */
-    top: 50%;
-    bottom: 20px; /* Ajusta la distancia desde la parte inferior de la pantalla */
-    right: 20px; /* Ajusta la distancia desde la parte derecha de la pantalla */
-    transform: translateY(-50%);
-    width: 25px; /* Aumenta el tamaño del contenedor */
-    height: 25px; /* Aumenta el tamaño del contenedor */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent; /* Fondo transparente */
-    border-radius: 20%; /* Hace el ícono redondo */
-    padding: 10px; /* Espacio alrededor del ícono */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para mayor visibilidad */
-    z-index: 1000; /* Asegura que el ícono esté encima de otros elementos */
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
+    position: fixed; /* Fija la posición del ícono en la ventana del navegador */
+    top: 50%; /* Ubica el ícono en el centro vertical de la ventana */
+    bottom: 20px; /* Establece un espaciado inferior de 20px */
+    right: 20px; /* Establece un espaciado derecho de 20px */
+    transform: translateY(-50%); /* Ajusta la posición vertical del ícono para centrarlo */
+    width: 25px; /* Define el ancho del ícono a 25px */
+    height: 25px; /* Define la altura del ícono a 25px */
+    display: flex; /* Utiliza flexbox para organizar el contenido dentro del ícono */
+    align-items: center; /* Centra los elementos verticalmente dentro del ícono */
+    justify-content: center; /* Centra los elementos horizontalmente dentro del ícono */
+    background-color: transparent; /* Establece un fondo transparente para el ícono */
+    border-radius: 20%; /* Redondea los bordes del ícono */
+    padding: 10px; /* Añade un espaciado interno de 10px */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Añade una sombra difusa alrededor del ícono */
+    z-index: 1000; /* Establece el nivel de apilamiento alto para el ícono */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Añade transiciones suaves para el fondo, la transformación y la sombra */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde del ícono */
 }
 
 .whatsapp-icon img {
-    width: 50px; /* Ajusta el tamaño del ícono */
-    height: auto; /* Mantiene la proporción del ícono */
-    object-fit: cover;
+    width: 50px; /* Define el ancho de la imagen dentro del ícono a 50px */
+    height: auto; /* Mantiene la proporción de altura de la imagen */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionarse */
 }
 
 .whatsapp-icon:hover {
-    background-color: transparent; /* Mantiene el fondo transparente en hover */
-    transform: scale(1.2); /* Aumenta el tamaño del ícono en hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-}
-
-/* Styles extracted from index.html */
-
-body {
-    font-family: 'Poppins', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #eae7ec;
-    color: #4a494a;
-    transition: background-color 0.5s ease-in-out;
-}
-
-body:hover {
-    background-color: #f5eb70;
-}
-
-header {
-    background-color: #ab99b2;
-    padding: 20px;
-    color: #4a494a;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    font-weight: 700;
-}
-
-header:hover {
-    transform: translateY(-3px);
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #4a494a;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #f5eb70;
-}
-
-main {
-    padding: 20px;
-}
-
-section {
-    background-color: white;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-footer {
-    background-color: #ab99b2;
-    color: #4a494a;
-    text-align: center;
-    padding: 10px;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    font-weight: 700;
-}
-
-#imagen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: url('img/fondo02.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 50px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#imagen img {
-    border-radius: 50%;
-    max-width: 50%;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#imagen img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-#imagen h1 {
-    text-align: center;
-    font-weight: 900;
-}
-
-#contacto address {
-    text-align: center;
-    font-weight: 300;
-}
-
-.redes-sociales {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.redes-sociales a {
-    margin: 0 10px;
-    display: inline-block;
-    color: #4a494a;
-    font-size: 2em;
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.redes-sociales a:hover {
-    transform: scale(1.1);
-    color: #ab99b2;
-}
-
-#inicio.centrado {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-#servicios ul {
-    list-style: none;
-    padding: 0;
-}
-
-#servicios ul li {
-    background-color: #ab99b2;
-    margin: 0.5rem 0;
-    padding: 0.5rem;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    font-weight: 600;
-}
-
-#servicios ul li:hover {
-    background-color: #f5eb70;
-}
-
-.logo {
-    max-width: 200px; /* Ajusta el valor según el tamaño deseado */
-    height: auto;
-}
+    background-color: transparent; /* Mantiene el fondo transparente al pasar el mouse sobre el ícono */
+    transform: scale(1.2); /* Escala el ícono al 120% al pasar el mouse sobre él */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Aumenta la sombra al pasar el mouse sobre el ícono */
 }
