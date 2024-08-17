@@ -173,21 +173,22 @@ footer {
     background-image: url('img/fondo02.jpg'); /* Establece una imagen de fondo para el contenedor */
     background-size: cover; /* Asegura que la imagen de fondo cubra todo el contenedor */
     background-position: center; /* Centra la imagen de fondo en el contenedor */
-    padding: 60px 0; /* Añade un espaciado interno vertical de 60px */
+    padding: 0px 0; /* Añade un espaciado interno vertical de 60px */
     border-radius: 12px; /* Añade bordes redondeados al contenedor */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Añade una sombra difusa alrededor del contenedor */
 }
 
 #imagen img {
-    border-radius: 50%; /* Hace que la imagen sea redonda */
-    max-width: 50%; /* Limita el ancho máximo de la imagen al 50% del contenedor */
+    /*border-radius: 50%; /* Hace que la imagen sea redonda */
+    max-width: 30%; /* Limita el ancho máximo de la imagen al 50% del contenedor */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Añade transiciones suaves para transformaciones y sombras */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil a la imagen */
+    margin-top: -70px;
+    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil a la imagen */
 }
 
 #imagen img:hover {
     transform: scale(1.1); /* Escala la imagen al 110% al pasar el mouse sobre ella */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al pasar el mouse sobre la imagen */
+    /*box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al pasar el mouse sobre la imagen */
 }
 
 #imagen h1 {
