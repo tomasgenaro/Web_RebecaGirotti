@@ -180,16 +180,14 @@ footer {
 }
 
 #imagen img {
-    /*border-radius: 50%; /* Hace que la imagen sea redonda */
     max-width: 30%; /* Limita el ancho máximo de la imagen al 50% del contenedor */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Añade transiciones suaves para transformaciones y sombras */
     margin-top: -70px;
-    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil a la imagen */
+    object-fit: cover; /* Ajusta la imagen para que cubra el área sin distorsión */
 }
 
 #imagen img:hover {
     transform: scale(1.1); /* Escala la imagen al 110% al pasar el mouse sobre ella */
-    /*box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al pasar el mouse sobre la imagen */
 }
 
 #imagen h1 {
