@@ -176,6 +176,7 @@ footer {
     padding: 0px 0; /* Añade un espaciado interno vertical de 60px */
     border-radius: 12px; /* Añade bordes redondeados al contenedor */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Añade una sombra difusa alrededor del contenedor */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga del contenedor */
 }
 
 #imagen img {
