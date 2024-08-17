@@ -180,10 +180,12 @@ footer {
 }
 
 #imagen img {
-    max-width: 30%; /* Limita el ancho máximo de la imagen al 50% del contenedor */
+    width: 100%;
+    max-width: 30%; /* Limita el ancho máximo de la imagen al 30% del contenedor */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Añade transiciones suaves para transformaciones y sombras */
     margin-top: -70px;
     object-fit: cover; /* Ajusta la imagen para que cubra el área sin distorsión */
+    height: auto;
 }
 
 #imagen img:hover {
@@ -324,4 +326,30 @@ footer {
     background-color: transparent; /* Mantiene el fondo transparente al pasar el mouse sobre el ícono */
     transform: scale(1.2); /* Escala el ícono al 120% al pasar el mouse sobre él */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Aumenta la sombra al pasar el mouse sobre el ícono */
+}
+
+@media (max-width: 768px) {
+    header img.logo {
+        width: 150px; /* Ajusta según sea necesario */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header img.logo {
+        width: 120px; /* Ajusta según sea necesario */
+    }
+
+    .whatsapp-icon img {
+        width: 50px; /* Ajusta según sea necesario */
+    }
 }
