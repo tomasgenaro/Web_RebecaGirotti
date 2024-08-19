@@ -139,7 +139,7 @@ nav ul li a {
     text-decoration: none; /* Elimina el subrayado de los enlaces */
     font-weight: 500; /* Define el peso de la fuente del enlace */
     transition: color 0.3s ease; /* Añade una transición suave para el cambio de color del enlace */
-    
+
 }
 
 nav ul li a:hover {
@@ -173,7 +173,7 @@ footer {
     background-image: url('img/fondo02.jpg'); /* Establece una imagen de fondo para el contenedor */
     background-size: cover; /* Asegura que la imagen de fondo cubra todo el contenedor */
     background-position: center; /* Centra la imagen de fondo en el contenedor */
-    padding: 0px 0; /* Añade un espaciado interno vertical de 60px */
+    padding: 0px 0; /* Añade un espaciado interno vertical */
     border-radius: 12px; /* Añade bordes redondeados al contenedor */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Añade una sombra difusa alrededor del contenedor */
     overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga del contenedor */
@@ -181,9 +181,9 @@ footer {
 
 #imagen img {
     width: 100%;
-    max-width: 30%; /* Limita el ancho máximo de la imagen al 30% del contenedor */
+    max-width: 40%; /* Limita el ancho máximo de la imagen al 40% del contenedor */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Añade transiciones suaves para transformaciones y sombras */
-    margin-top: -70px;
+    margin-top: 0px;
     object-fit: cover; /* Ajusta la imagen para que cubra el área sin distorsión */
     height: auto;
 }
