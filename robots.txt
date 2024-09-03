@@ -27,4 +27,4 @@ Allow: /wp-content/themes/
 Allow: /wp-content/plugins/
 
 # Sitemap location
-Sitemap: https://abogadarebecagirotti.com.ar/sitemap.xml
+Sitemap: https://www.abogadarebecagirotti.com.ar/sitemap.xml
