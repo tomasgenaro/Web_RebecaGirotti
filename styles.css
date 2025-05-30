@@ -353,3 +353,7 @@ footer {
         width: 50px; /* Ajusta según sea necesario */
     }
 }
+
+h1 {
+    display: none;
+}
