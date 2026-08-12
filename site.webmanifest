@@ -1,0 +1,22 @@
+{
+  "name": "Estudio Dra. Rebeca Girotti",
+  "short_name": "Rebeca Girotti",
+  "description": "Estudio jurídico en Chivilcoy con atención presencial y consultas virtuales.",
+  "lang": "es-AR",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f5f8",
+  "theme_color": "#211a24",
+  "icons": [
+    {
+      "src": "assets/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
