@@ -49,6 +49,17 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+p,
+li,
+dd {
+  text-wrap: pretty;
+}
+
+.editorial-line {
+  display: block;
+  max-width: 100%;
+}
+
 body.menu-open {
   overflow: hidden;
 }
@@ -1452,6 +1463,10 @@ a {
 @media (max-width: 640px) {
   body {
     font-size: 16px;
+  }
+
+  .editorial-line {
+    display: inline;
   }
 
   .container {

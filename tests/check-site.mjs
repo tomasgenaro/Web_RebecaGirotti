@@ -47,6 +47,20 @@ test("aplica la redacción solicitada y conserva los saltos móviles", async () 
   assert.doesNotMatch(css, /\.mobile-copy|\.desktop-copy/);
 });
 
+test("mejora los cortes editoriales sin rediseñar ni reescribir el sitio", async () => {
+  const html = await read("index.html");
+  const css = await read("css/styles.css");
+  assert.match(html, /Acompañamiento jurídico presencial en Chivilcoy y consultas virtuales,<\/span>/);
+  assert.match(html, /Cada consulta comienza por escuchar la situación,<\/span>/);
+  assert.match(html, /Escribí por WhatsApp para solicitar una consulta\.<\/span>/);
+  assert.match(html, /de&nbsp;la&nbsp;Universidad de Lomas de Zamora/);
+  assert.match(css, /\.editorial-line\s*\{[\s\S]*?display:\s*block/);
+  assert.match(css, /@media \(max-width: 640px\)[\s\S]*?\.editorial-line\s*\{[\s\S]*?display:\s*inline/);
+  assert.match(css, /p,[\s\S]*?li,[\s\S]*?dd\s*\{[\s\S]*?text-wrap:\s*pretty/);
+  assert.doesNotMatch(html, /Tu situación merece ser escuchada/);
+  assert.match(html, /El primer paso es conversar sobre tu situación\./);
+});
+
 test("presenta el título de práctica en dos renglones de escritorio", async () => {
   const html = await read("index.html");
   const css = await read("css/styles.css");

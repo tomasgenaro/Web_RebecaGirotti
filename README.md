@@ -1,4 +1,4 @@
-# Estudio Dra. Rebeca Girotti — versión 1.10
+# Estudio Dra. Rebeca Girotti — versión 1.10.1
 
 Sitio institucional estático, mobile-first y sin dependencias de producción. Está desarrollado con HTML5 semántico, CSS3 y JavaScript puro, listo para alojarse en GitHub Pages, Cloudflare Pages, Netlify o Vercel.
 
@@ -10,7 +10,15 @@ Sitio institucional estático, mobile-first y sin dependencias de producción. E
 - SEO técnico básico: metadatos, Open Graph, JSON-LD, `robots.txt` y `sitemap.xml`.
 - Navegación accesible, foco visible, menú móvil con control de teclado y soporte para `prefers-reduced-motion`.
 
-## Cambios de la versión 1.10
+## Cambios de la versión 1.10.1
+
+- Conserva íntegramente el diseño, las proporciones, la tipografía y la redacción de la versión 1.10.
+- Corrige únicamente cortes incómodos en el hero, “Sobre mí”, áreas de práctica, modalidad y contacto.
+- Mantiene juntas expresiones breves que no deben separarse, como “de la Universidad”, “con obligaciones” o “del proceso”.
+- Utiliza cortes editoriales controlados en escritorio y recupera el flujo natural del texto en celulares.
+- La versión 1.11 anterior queda descartada por modificar en exceso la redacción y el ritmo visual.
+
+## Mejoras heredadas de la versión 1.10
 
 - El arco decorativo de “Sobre mí” queda limitado exclusivamente a la mitad izquierda de la sección, donde antes estaba el título.
 - El recurso se desvanece al acercarse a los límites superior e inferior y no invade el contenido profesional.
